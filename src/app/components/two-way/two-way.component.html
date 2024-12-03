@@ -1,0 +1,13 @@
+<h1>two-way binding</h1>
+<hr>
+<input [class]="style" #firstName>
+<input [class]="style" #middleName>
+<input [class]="style" #course>
+
+<!-- <button mat-button color="primary"> Get</button>
+<button mat-flat-button> Get</button> -->
+<button mat-raised-button color="primary" (click)="onClick(firstName.value)"> Get</button>
+<h2>{{"First Name :"+ fname}}</h2>
+<hr>
+<input type="text" [(ngModel)]="myText">
+<h2>{{myText}}</h2>

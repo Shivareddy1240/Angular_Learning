@@ -1,0 +1,4 @@
+<p>parent works!</p>
+<h1>{{pData}}</h1>
+<h1>{{dataFromChild}}</h1>
+<app-child (cData)="dataFromChild = $event" [parentPostMan]="pData"></app-child>

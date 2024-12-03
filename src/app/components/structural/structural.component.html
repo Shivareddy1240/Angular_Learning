@@ -1,0 +1,31 @@
+<p style="margin-left: 10px;"><b><u>If Directive</u></b></p>
+<h3 *ngIf="Check();" style="color:red">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Sit quos aliquam id odio tempora iste facilis tempore porro quas. 
+    Neque sunt porro temporibus repudiandae amet consectetur delectus magni! Recusandae, ratione?</h3>
+<h3 *ngIf="Check(); then trueBlock else elseBlock" style="color:blue"></h3>
+<ng-template #elseBlock>
+    <h4>Else Block</h4>
+</ng-template>
+<ng-template #trueBlock>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Porro deserunt earum magni voluptatum ducimus cum harum maiores tempora iusto doloribus eligendi consequuntur,
+     ut quae enim, sunt, aliquid odit laborum sit.
+</ng-template>
+<hr>
+<p style="margin-left: 10px;"><b><u>For Directive</u></b></p>
+    <li *ngFor="let name of names;index as i ">value: {{name}} - Index: {{i}}</li>
+
+    <!-- <h2 *ngFor="let name of names; even as evenPositions">{{evenPositions}}</h2>
+    <br>
+    <h2 *ngFor="let name of names; odd as oddPositions">{{oddPositions}}</h2> -->
+<br>
+    <!-- <h2 *ngFor="let emp of employee | keyvalue">{{emp.key}} - {{emp.value}}</h2> -->
+    <br>
+    <!-- <h2 *ngFor="let eachEmp of employees | keyvalue">
+       {{eachEmp.key}} - {{eachEmp.value}}
+    </h2> -->
+    <div *ngFor="let eachEmp of employees">
+        <h2 *ngFor="let emp of eachEmp | keyvalue">
+            {{emp.key}} - {{emp.value}}
+        </h2>
+    </div>
