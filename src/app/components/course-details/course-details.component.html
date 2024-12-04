@@ -1,7 +1,9 @@
-<h2>Course Details:</h2>
-<h3 *ngFor="let details of courseDetails">
-    {{details.id}} - {{details.name}} - {{details.fee}}
-</h3>
+<h2 style="text-align: center; color: #4CAF50;">Course Details</h2>
+<div *ngFor="let details of courseDetails" (click)="onSelect(details)" class="course-card">
+    <p><strong>ID:</strong> {{ details.id }}</p>
+    <p><strong>Name:</strong> {{ details.name }}</p>
+    <p><strong>Fee:</strong> ${{ details.fee }}</p>
+</div>
 <div>
-    <h1>{{errorMessage}}</h1>
+    <h1 class="error-message">{{ errorMessage }}</h1>
 </div>
