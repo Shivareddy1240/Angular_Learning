@@ -29,3 +29,21 @@
             {{emp.key}} - {{emp.value}}
         </h2>
     </div>
+
+    <hr>
+    <h1>Switch</h1>
+    <h3 [ngSwitch]="myChoice">
+        <h2 *ngSwitchCase="'one'">
+            <h2>Sunday</h2>
+        </h2>
+        <h2 *ngSwitchCase="'two'">
+            <h2>Monday</h2>
+        </h2>
+        <h2 *ngSwitchCase="'three'">
+            <h2>Tuesday</h2>
+        </h2>
+        <h2 *ngSwitchDefault="">
+            <h2>No Match Found</h2>
+        </h2>
+    </h3>
+    

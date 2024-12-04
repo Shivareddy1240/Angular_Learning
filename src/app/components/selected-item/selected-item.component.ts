@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-selected-item',
@@ -9,9 +9,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './selected-item.component.css'
 })
 export class SelectedItemComponent {
-  public courseID = '';
+  public courseID;
   public courseName = '';
-  constructor(private _activatedRoute : ActivatedRoute){
-    this.courseID = _activatedRoute.snapshot.paramMap.get('id');
+  constructor(private _activatedRoute : ActivatedRoute, private _router: Router){
+    // this.courseID = _activatedRoute.snapshot.paramMap.get('id');
+    _activatedRoute.paramMap.subscribe((param : ParamMap)=>{
+      this.courseID = parseInt(param.get('id')) 
+    })
+  }
+  goPrevious(){
+    let currentID = this.courseID -1
+    // this.courseID = this.courseID - 1
+    this._router.navigate(['/selectedItem',currentID])
+  }
+  goNext(){
+    let currentID = this.courseID +1 
+    // this.courseID = this.courseID + 1;
+    this._router.navigate(['/selectedItem',currentID])
   }
 }

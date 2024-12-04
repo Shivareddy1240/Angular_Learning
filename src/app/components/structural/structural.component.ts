@@ -31,7 +31,9 @@
       name:'Akash'
     }
   ]
+  public myChoice = "two"
   public Check(){
   return this.isRequired = true;
   }
+
   }
