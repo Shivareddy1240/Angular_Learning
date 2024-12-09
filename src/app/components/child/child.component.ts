@@ -14,4 +14,8 @@ export class ChildComponent {
 onClick(){
   this.cData.emit("This is child data")
 }
+data = "demo of view child"
+passToParent(){
+return this.data;
+}
 }

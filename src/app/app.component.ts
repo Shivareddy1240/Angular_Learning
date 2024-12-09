@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, UpperCasePipe,LowerCasePipe } from '@angular/common';
 import { EvntBindingComponent } from "./components/evnt-binding/evnt-binding.component";
 import { TwoWayComponent } from "./components/two-way/two-way.component";
 import { StructuralComponent } from "./components/structural/structural.component";
 import { ParentComponent } from "./components/parent/parent.component";
 import { ChildComponent } from "./components/child/child.component";
+import { PipesDemoComponent } from "./components/pipes-demo/pipes-demo.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, CommonModule, EvntBindingComponent, TwoWayComponent, StructuralComponent, ParentComponent, ChildComponent],
+  imports: [RouterOutlet, HomeComponent, CommonModule, EvntBindingComponent, TwoWayComponent, StructuralComponent, ParentComponent, ChildComponent, PipesDemoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,4 +1,8 @@
 <p>parent works!</p>
 <h1>{{pData}}</h1>
 <h1>{{dataFromChild}}</h1>
+<button (click)="getDataFromChild()">Click</button>
+
 <app-child (cData)="dataFromChild = $event" [parentPostMan]="pData"></app-child>
+
+

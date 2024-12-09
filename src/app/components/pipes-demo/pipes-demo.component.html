@@ -1,0 +1,14 @@
+<h1>{{name | titlecase}}</h1>
+<h1>{{salary | currency : 'INR' : 'symbol'}}</h1>
+
+<h1>{{employee | json}}</h1>
+<h1>{{dob | date: 'dd/MM/yyyy'}}</h1>
+<h1>{{num | percent}}</h1>
+<h1>{{company}}</h1>
+<h1>{{company | slice : 2:4}}</h1>
+
+<div #myDiv class="one"></div>
+<div>{{myDiv.classList}}</div>
+<input value="this is my input value" #myInput>
+<button (click)="OnButtonClick(myInput)">Click Me</button>
+<div>{{myValue}}</div>
