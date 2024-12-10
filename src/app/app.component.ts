@@ -8,10 +8,11 @@ import { StructuralComponent } from "./components/structural/structural.componen
 import { ParentComponent } from "./components/parent/parent.component";
 import { ChildComponent } from "./components/child/child.component";
 import { PipesDemoComponent } from "./components/pipes-demo/pipes-demo.component";
+import { ManipulationDomComponent } from "./components/manipulation-dom/manipulation-dom.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, CommonModule, EvntBindingComponent, TwoWayComponent, StructuralComponent, ParentComponent, ChildComponent, PipesDemoComponent],
+  imports: [RouterOutlet, HomeComponent, CommonModule, EvntBindingComponent, TwoWayComponent, StructuralComponent, ParentComponent, ChildComponent, PipesDemoComponent, ManipulationDomComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
